@@ -1,0 +1,13 @@
+version: "2"
+services:
+  airea:
+    restart: unless-stopped
+    image: "ghcr.io/natant-network/airea:main"
+    ports:
+    #IMPORTANT: DO NOT CHANGE THE 6969 PART ONLY CHANGE THE <your port here> PART REMOVING THE <> AROUND IT
+      - <your port here>:8080
+# network config if youi want a network config feel free to use the one below and change the name to your liking. YOU MUST RUN docker network create <your name> BEFORE RUNNING THE CONTAINER
+#networks:
+#  default:
+#    external:
+#      name: default
